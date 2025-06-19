@@ -21,6 +21,6 @@ namespace Std.PRange.Nat
 --     ((m+1)..(n+1)).toList = (m..n).toList.map (· + 1) := sorry
 
 theorem ClosedOpen.toList_succ_succ  {m n : Nat} :
-    ((m+1)...<(n+1)).toList = (m...<n).toList.map (· + 1) := sorry
+    ((m+1),,<(n+1)).toList = (m,,<n).toList.map (· + 1) := sorry
 
 end Std.PRange.Nat

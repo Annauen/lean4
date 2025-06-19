@@ -12,7 +12,7 @@ import Init.Data.Array.Lemmas
 import Init.Data.Array.MapIdx
 import Init.Data.Array.InsertIdx
 import Init.Data.Array.Range
-import Init.Data.Range.New.Nat
+import Init.Data.Range.Polymorphic.Nat
 import Init.Data.Stream
 
 /-!

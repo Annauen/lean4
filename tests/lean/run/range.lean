@@ -104,11 +104,11 @@ open Std.Iterators
 
 #eval (1...=4).iter.toList
 
-#eval (1<...<4).iter.toList
+#eval (1<,,<4).iter.toList
 
-#eval (2<...<5).size
+#eval (2<,,<5).size
 
-#eval (2<...<15).iter.stepSize 2 |>.toList
+#eval (2<,,<15).iter.stepSize 2 |>.toList
 
 #eval (2...=5).toList
 
