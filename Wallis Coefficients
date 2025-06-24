@@ -1,0 +1,17 @@
+import Mathlib.Data.Nat.Basic
+import Mathlib.Data.Real.Basic
+import Mathlib.Analysis.SpecialFunctions.Pow
+import Mathlib.Analysis.Calculus.MeanValue
+import Mathlib.Topology.Algebra.Limit
+
+open BigOperators
+
+def sum_of_powers (p n : ℕ) : ℝ :=
+  ∑ k in Finset.range (n + 1), (k : ℝ)^p
+
+def limit_expr (p : ℕ) (x : ℝ) :=
+  Filter.Tendsto (fun n : ℕ ↦
+    let Δx := x / n
+    (Δx)^(p + 1) * sum_of_powers p n
+  ) Filter.atTop (nhds (x^(p + 1) / (p + 1)))
+
